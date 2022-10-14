@@ -2,3 +2,8 @@ doc-to-pdf
 
 https://phpforever.com/laravelexample/how-to-convert-word-to-pdf-in-laravel/
 ==========================================================
+
+write-pdf
+
+https://arjunphp.com/how-to-write-text-on-existing-pdf-using-laravel-php/
+==========================================================
