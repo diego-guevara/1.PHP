@@ -30,13 +30,17 @@ if (realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])) {
 	if (isset($_POST['s']) && isset($_POST['d'])) {
 		$generator = new barcode_generator();
 		$format = (isset($_POST['f']) ? $_POST['f'] : 'png');
-		$generator->output_image($format, $_POST['s'], $_POST['d'], $_POST);
+		$name = (isset($_POST['name']) ? $_POST['name'] : 'imagen.png');
+		$orientation = (isset($_POST['orientation']) ? $_POST['orientation'] : 'vertical');
+		$generator->output_image($format, $_POST['s'], $_POST['d'], $_POST, $name, $orientation);
 		exit(0);
 	}
 	if (isset($_GET['s']) && isset($_GET['d'])) {
 		$generator = new barcode_generator();
 		$format = (isset($_GET['f']) ? $_GET['f'] : 'png');
-		$generator->output_image($format, $_GET['s'], $_GET['d'], $_GET);
+		$name = (isset($_GET['name']) ? $_GET['name'] : 'imagen.png');
+		$orientation = (isset($_GET['orientation']) ? $_GET['orientation'] : 'vertical');
+		$generator->output_image($format, $_GET['s'], $_GET['d'], $_GET, $name, $orientation);
 		exit(0);
 	}
 }
